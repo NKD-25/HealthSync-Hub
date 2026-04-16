@@ -1,130 +1,167 @@
-**AI Trading Assistant for Day and Swing Traders – Analyze Market Trends, Predict Movements, and Make Smarter Investment Decisions**
+# 🏥 HealthSync Hub
 
+HealthSync Hub is a full-stack healthcare monitoring and management system designed to provide real-time health data tracking, patient monitoring, and seamless interaction between users and medical services. This project integrates modern web technologies to create a scalable and practical healthcare solution.
 
-*This project is designed for day and swing traders. Our AI agent leverages powerful tools like market prediction, trend analysis, and news sentiment evaluation to help you make informed investment decisions and know when to enter or exit the market.*
+---
 
+## 🚀 Project Overview
 
-🚀 Getting Started
-1️⃣ Clone the repo
-```bash
-git clone https://github.com/Open-Source-Chandigarh/tradeGPT.git
-cd tradeGPT
+HealthSync Hub is built as a **MERN stack application** (MongoDB, Express.js, React, Node.js) that enables:
+
+* 📊 Real-time patient health monitoring
+* 🔐 Secure authentication (Login/Register with JWT)
+* 📡 Data communication between frontend and backend
+* 🧑‍⚕️ Centralized health data visualization
+* 📱 Responsive UI for accessibility across devices
+
+---
+
+## 🏗️ Project Structure
+
+```
+medapp-cgc/
+│
+├── backend/        # Node.js + Express server
+│   ├── config/     # Database configuration
+│   ├── models/     # MongoDB models
+│   ├── routes/     # API routes
+│   ├── middleware/ # Authentication middleware
+│   └── server.js   # Entry point
+│
+├── frontend/       # React application
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── App.jsx
+│   └── index.html
+│
+└── README.md
 ```
 
+---
 
-1️⃣ You will need an ai (either you can run locally on docker or use openai_api_key)
+## ⚙️ Tech Stack
 
-How to install locally on docker 
+### Frontend:
 
-I am using gemma-3
-run these cmd's in your terminal
+* React.js
+* Vite
+* Tailwind CSS
+* Axios
+
+### Backend:
+
+* Node.js
+* Express.js
+* MongoDB (Mongoose)
+* JWT Authentication
+
+### Other Tools:
+
+* Git & GitHub
+* REST APIs
+* Socket (if implemented for real-time features)
+
+---
+
+## 🔑 Features
+
+* 👤 User Authentication (Register/Login)
+* 🔒 JWT-based secure routes
+* 📈 Health data monitoring system
+* 🔄 API integration between frontend & backend
+* 📡 Scalable backend architecture
+* 💻 Clean and modular code structure
+
+---
+
+## 🛠️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
 ```bash
-docker model pull ai/gemma3
+git clone <your-repo-url>
+cd medapp-cgc
 ```
 
+---
+
+### 2️⃣ Backend Setup
+
 ```bash
-docker model pull ai/embeddinggemma
+cd backend
+npm install
 ```
 
+Create a `.env` file:
 
-2️⃣ go to books/code
-
-copy .env.example to .env
-populate qdrant api keys and url from qdrant cloud
-```bash
-npm i
-node generateEmbeddings
+```
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
 ```
 
+Run backend:
 
-3️⃣ go to /pythonModel
 ```bash
-uvicorn api:app --reload
+npm start
 ```
 
-4️⃣ go to tradefront
-copy .env.example to .env
-and populate all .env fields
-if you are using local model then leave openai_api_key empty
+---
 
-run 
-```bash
-npm i
-```
+### 3️⃣ Frontend Setup
 
-then
 ```bash
+cd frontend
+npm install
 npm run dev
 ```
 
+---
 
-Go to 👉 http://localhost:3000
+## 🌐 API Endpoints (Sample)
 
+| Method | Endpoint           | Description   |
+| ------ | ------------------ | ------------- |
+| POST   | /api/auth/register | Register user |
+| POST   | /api/auth/login    | Login user    |
+| GET    | /api/user/profile  | Get user data |
 
+---
 
+## 📸 Future Improvements
 
-You can start editing by modifying app/page.tsx.
+* 📲 IoT Integration (real-time sensor data like heart rate, temperature)
+* 🧠 AI-based health prediction system
+* 📊 Advanced analytics dashboard
+* 🏥 Doctor-patient communication module
+* ☁️ Cloud deployment (AWS / Render / Vercel)
 
-The page auto-updates when you save changes.
+---
 
-✨ Features
+## 🤝 Contribution
 
-⚡ Built with Next.js 15
+Contributions are welcome! Feel free to fork the repo and submit a pull request.
 
-🎨 Uses next/font with Geist font family
+---
 
-🔥 Hot Reloading
+## 📄 License
 
-☁️ Easy deploy on Vercel
+This project is open-source and available under the MIT License.
 
-📦 Open for Hacktoberfest contributions
+---
 
-🤝 Contributing (Hacktoberfest Guidelines)
+## 👨‍💻 Author
 
-We welcome all contributions! 🎉
+Developed as a healthcare-focused project to bridge the gap between technology and patient care.
 
-Fork the repo 🍴
+---
 
-Create your feature branch:
-```bash
+## ⭐ Acknowledgment
 
-git checkout -b feature/your-feature
-```
+Inspired by the need for real-time and accessible healthcare monitoring systems.
 
+---
 
-Commit your changes:
-
-```bash
-
-git commit -m "Added: your feature"
-```
-
-
-Push to the branch:
-```bash
-git push origin feature/your-feature
-```
-
-
-Open a Pull Request 🚀
-
-📌 Make sure your PR is meaningful (bug fixes, features, docs improvements).
-Spam PRs will be rejected ❌.
-
-📚 Learn More
-
-Next.js Documentation
-
-Learn Next.js – Interactive Tutorial
-
-Hacktoberfest Official Site
-
-☁️ Deployment
-
-The easiest way to deploy is with Vercel
- (creators of Next.js).
-Just connect your GitHub repo and deploy in one click!
-
-🧑‍💻 Contributors
-
-Thanks to all contributors who make this project better ❤️
+**HealthSync Hub — Connecting Health with Technology 💙**
